@@ -1,6 +1,6 @@
 export class GameDto {
-    name: String;
-    publisher: String;
-    plateform: String;
-    releaseyear: Number
+    name: string;
+    publisher: string;
+    plateform: string;
+    releaseyear: number
 }

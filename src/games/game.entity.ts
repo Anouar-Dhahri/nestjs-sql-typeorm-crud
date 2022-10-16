@@ -3,16 +3,16 @@ import { Column, Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateCol
 @Entity()
 export class Game {
   @PrimaryGeneratedColumn()
-  id: Number
+  id: number
 
   @Column({nullable: true})
-  name: String
+  name: string
 
   @Column({nullable: true})
-  publisher: String
+  publisher: string
 
   @Column({nullable: true})
-  plateform: String
+  plateform: string
 
   @Column({nullable: true})
   releaseyear: Number
