@@ -8,7 +8,7 @@ import { Game } from './game.entity';
 export class GamesService {
   constructor(
     @InjectRepository(Game) 
-    private readonly gameRepository: Repository<Game>
+    private readonly gameRepository: Repository<Game>,
   ){}
 
   async Create(gameDto: GameDto):Promise<Game> {
@@ -22,8 +22,8 @@ export class GamesService {
   }
 
   async FindAll():Promise<Game[]> {
-    const games = await this.gameRepository.find()
-    return games
+    return this.gameRepository.find()
+    //return games
   }
 
   async FindOne(id: number):Promise<Game> {

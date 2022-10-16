@@ -22,7 +22,7 @@ export class GamesController {
   }
 
   @Put('/:id')
-  async Update(@Param('id', ParseIntPipe)id:number, @Body() gameDto: GameDto):Promise<Game> {
+  async Update(@Param('id', ParseIntPipe) id:number, @Body() gameDto: GameDto):Promise<Game> {
     return this.gamesService.Update(id, gameDto)
   }
 
