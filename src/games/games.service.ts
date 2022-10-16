@@ -11,7 +11,7 @@ export class GamesService {
     private readonly gameRepository: Repository<Game>
   ){}
 
-  async create(gameDto: GameDto):Promise<Game> {
+  async Create(gameDto: GameDto):Promise<Game> {
     const newGame = new Game()
     newGame.name = gameDto.name;
     newGame.publisher = gameDto.publisher;
@@ -46,7 +46,7 @@ export class GamesService {
     return updatedRow
   }
 
-  async Remove(id: string) {
+  async Remove(id: string):Promise<any> {
     await this.gameRepository.delete(id)
     return { deleted: true };
   }
